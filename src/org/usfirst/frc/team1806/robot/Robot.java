@@ -1,6 +1,10 @@
 
 package org.usfirst.frc.team1806.robot;
 
+import org.usfirst.frc.team1806.robot.commands.drive;
+import org.usfirst.frc.team1806.robot.subsystems.driveTrain;
+import org.usfirst.frc.team1806.robot.subsystems.peripherals;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -8,17 +12,18 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-
 public class Robot extends IterativeRobot {
-
+		
+	public static final driveTrain driveSS = new driveTrain();
+	public static final peripherals peripheralSS = new peripherals();
+	
+	public static final drive driveCommand = new drive();
+	
 	public static OI oi;
 
     Command autonomousCommand;
     SendableChooser autoChooser;
     
-    SendableChooser testMotor;
-
-   
     public void robotInit() {
 		oi = new OI();
         autoChooser = new SendableChooser();        

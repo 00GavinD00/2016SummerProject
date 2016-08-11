@@ -27,4 +27,11 @@ public class RobotMap {
 			btnB = 2,
 			btnX = 3,
 			btnY = 4;
+	
+	public static int leftMtr1 = 1,
+			leftMtr2 = 2,
+			leftMtr3 = 3,
+			rightMtr1 = 4,
+			rightMtr2 = 5,
+			rightMtr3 = 6;
 }
